@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/brands.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Muslim Pergi</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dashboard Admin</p>
+                <li class="active">
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="invoices.html">Invoices</a>
+                </li>
+                <li>
+                    <a href="packages.html">Packages</a>
+                </li>
+                <li>
+                    <a href="payments.html">Payments</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">More</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="artikel.html">Artikel</a>
+                        </li>
+                        <li>
+                            <a href="testimonial.html">Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="admin.html">Admin</a>
+                        </li>
+                        <li>
+                            <a href="more.html">More</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="dashboard" class="container mt-5">
+                <div class="row clearfix">
+                    <div class="col status">
+                        <div class="main-report d-inline-flex float-left bd-highlight bg-light">
+                            <div class="col-xs-6 col-md-3">
+                                <h1>
+                                    <strong>12</strong>
+                                </h1> <span class="dots dots-green"></span>
+                                <small>Active Packages</small>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <h1>
+                                    <strong>6</strong>
+                                </h1> <span class="dots dots-blue"></span>
+                                <small>New Invoices</small>
+                            </div>
+                            <div class="col-xs-6 col-lg-3">
+                                <h1>
+                                    <strong>28</strong>
+                                </h1> <span class="dots dots-orange"></span>
+                                <small>Recents Invoices</small>
+                            </div>
+                            <div class="col-xs-6 col-lg-3">
+                                <h1>
+                                    <strong>0</strong>
+                                </h1> <span class="dots dots-red"></span>
+                                <small>Unverified Payments</small>
+                            </div>
+                        </div>
+
+                        <div class="float-right">
+                            <button href="#" class="btn-invoices btn btn-sm mt-3">
+                                <span class="fas fa-plus"></span> 
+                                <span>Create Invoices</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="new-invoices container mt-5">
+                <div class="row">
+                    <h3 class="ml-3">
+                        <strong>New Invoices</strong>
+                    </h3>
+                    
+                    <div class="table-responsive table-responsive-sm mt-3">
+                        <table class="table table-striped table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Package</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Payment</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <h6>May 01, 2019</h6>
+                                    </th>
+                                    <td>
+                                        <div class="media">
+                                            <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                            <div class="media-body">
+                                                <h6 class="m-0">John Doe</h6>
+                                                <small class="text-muted">2 Quad. 1 Triple</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>Umroh Gold Plus Aqsha</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 4500</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 0</h6>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-secondary blue">
+                                            <span class="fas fa-circle"></span> <span>NEW</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            Take Over
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <h6>Apr 18, 2019</h6>
+                                    </th>
+                                    <td>
+                                        <div class="media">
+                                            <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                            <div class="media-body">
+                                                <h6 class="m-0">John Doe</h6>
+                                                <small class="text-muted">2 Quad. 1 Triple</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>Umroh Gold Plus Aqsha</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 4500</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 0</h6>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-secondary blue">
+                                            <span class="fas fa-circle"></span> <span>NEW</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            Take Over
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <h6>Apr 12, 2019</h6>
+                                    </th>
+                                    <td>
+                                        <div class="media">
+                                            <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                            <div class="media-body">
+                                                <h6 class="m-0">John Doe</h6>
+                                                <small class="text-muted">2 Quad. 1 Triple</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>Umroh Premium</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 8200</h6>
+                                    </td>
+                                    <td>
+                                        <h6>USD 0</h6>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-secondary blue">
+                                            <span class="fas fa-circle"></span> <span>NEW</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <small class="notif-pending">Waiting for Payment</small>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-outline-secondary"><</button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                <button type="button" class="btn btn-outline-secondary">></button>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="packages container mt-5 mb-5">
+                <div class="row">
+                    <h3 class="ml-3">
+                        <strong>Packages</strong>
+                    </h3>
+                </div>
+                <div class="row mt-3">
+                    <!-- Packages Umroh -->
+                    <div class="col-sm-12 col-md-4 mb-3">
+                        <div class="card" style="width: auto">
+                            <div class="card-header">
+                                <span class="float-left">Closed in 21 days</span>
+                                <span class="status float-right">ACTIVE</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Umroh Gold Plus Aqsha</h3>
+                                <p>02 - 15 Mei</p>
+                                <p class="card-text text-muted overflow-hidden">
+                                    Umroh gold merupakan salah satu program utama dari Ummi travel yang ...
+                                    <!-- sangat menarik karena paket ini jama'ah akan
+                                    diberikan fasilitas yang sangat baik mulai dari akomodasi sampai lainnya. -->
+                                </p>
+                                <div class="price float-right text-right">
+                                    <h4>
+                                        <strong>USD 4500</strong>
+                                    </h4>
+                                    <small class="text-muted">Tersisa 2 paket</small>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Packages Umroh -->
+
+                    <!-- Packages Umroh -->
+                    <div class="col-sm-12 col-md-4 mb-3">
+                        <div class="card" style="width: auto">
+                            <div class="card-header">
+                                <!-- <span class="float-left">Closed in 21 days</span> -->
+                                <span class="status float-right">ACTIVE</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Umroh Gold Awal Ramadhan</h3>
+                                <p>05 - 19 Juni 2019</p>
+                                <p class="card-text text-muted overflow-hidden">
+                                    Umroh gold awal ramadhan merupakan program premium dari kami yang sayang untuk ...
+                                    <!-- sangat menarik karena paket ini jama'ah akan
+                                    diberikan fasilitas yang sangat baik mulai dari akomodasi sampai lainnya. -->
+                                </p>
+                                <div class="price float-right text-right">
+                                    <h4>
+                                        <strong>USD 5500</strong>
+                                    </h4>
+                                    <small class="text-muted">Tersisa 18 paket</small>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Packages Umroh -->
+
+                    <!-- Packages Umroh -->
+                    <div class="col-sm-12 col-md-4 mb-3">
+                        <div class="card disabled text-decoration-none" tabindex="-1" aria-disabled="true" style="width: auto">
+                            <div class="card-header">
+                                <span class="float-left">Package Closed</span>
+                                <span class="status float-right">ACTIVE</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Umroh Bronze</h3>
+                                <p>15 - 21 Juli 2019</p>
+                                <p class="card-text text-muted overflow-hidden">
+                                    Umroh gold merupakan salah satu program utama dari Ummi travel yang ...
+                                    <!-- sangat menarik karena paket ini jama'ah akan
+                                    diberikan fasilitas yang sangat baik mulai dari akomodasi sampai lainnya. -->
+                                </p>
+                                <div class="price float-right text-right">
+                                    <h4>
+                                        <strong>USD 2100</strong>
+                                    </h4>
+                                    <small class="text-muted">Tersisa 1 paket</small>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Packages Umroh -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

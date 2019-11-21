@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/brands.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Muslim Pergi</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dashboard Admin</p>
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="invoices.html">Invoices</a>
+                </li>
+                <li>
+                    <a href="packages.html">Packages</a>
+                </li>
+                <li class="active">
+                    <a href="payments.html">Payments</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">More</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="artikel.html">Artikel</a>
+                        </li>
+                        <li>
+                            <a href="testimonial.html">Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="admin.html">Admin</a>
+                        </li>
+                        <li>
+                            <a href="more.html">More</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="new-payment container my-5">
+            
+                <div class="row">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-verified-tab" data-toggle="pill" href="#pills-verified" role="tab" aria-controls="pills-verified" aria-selected="false">Verified</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-unverified-tab" data-toggle="pill" href="#pills-unverified" role="tab" aria-controls="pills-unverified" aria-selected="false">Unverified</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="pills-tabContent">
+    
+                    <!-- all -->
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Invoice</th>
+                                            <th>Name</th>
+                                            <th>Amount</th>
+                                            <th>Pict</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">2 Quad, 1 Triple</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary green">
+                                                    <span class="fas fa-circle"></span> <span>Verified</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <!-- <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a> -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End all -->
+    
+                    <!-- verified -->
+                    <div class="tab-pane fade" id="pills-verified" role="tabpanel" aria-labelledby="pills-verified-tab">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Invoice</th>
+                                            <th>Name</th>
+                                            <th>Amount</th>
+                                            <th>Pict</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary green">
+                                                    <span class="fas fa-circle"></span> <span>Verified</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <!-- <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a> -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End verified -->
+    
+                    <!-- unverified -->
+                    <div class="tab-pane fade" id="pills-unverified" role="tabpanel" aria-labelledby="pills-unverified-tab">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Invoice</th>
+                                            <th>Name</th>
+                                            <th>Amount</th>
+                                            <th>Pict</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">2 Quad, 1 Triple</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>May 01, 2019</h6>
+                                            </td>
+                                            <td>
+                                                <h6>212/INV/UMR/JUN/2019</h6>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <img src="./assets/img/images.jpeg" class="avatar" alt="Responsive Image">
+                                                    <div class="media-body">
+                                                        <h6 class="m-0">Sugiono</h6>
+                                                        <small class="text-muted">1 Quad</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h6>USD 4500</h6>
+                                            </td>
+                                            <td>
+                                                <span class="border border-secondary" style="width: 2rem; height: 2rem; display: inline-block"></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-secondary orange">
+                                                    <span class="fas fa-circle"></span> <span>Waiting</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="#" role="button">
+                                                    Konfirm
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- End unverified -->
+    
+                </div> 
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

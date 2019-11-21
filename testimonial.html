@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/brands.min.css">
+    <link rel="stylesheet" href="assets/css/solid.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Muslim Pergi</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dashboard Admin</p>
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="invoices.html">Invoices</a>
+                </li>
+                <li>
+                    <a href="packages.html">Packages</a>
+                </li>
+                <li>
+                    <a href="payments.html">Payments</a>
+                </li>
+                <li class="active">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">More</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="artikel.html">Artikel</a>
+                        </li>
+                        <li class="active">
+                            <a href="testimonial.html">Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="admin.html">Admin</a>
+                        </li>
+                        <li>
+                            <a href="more.html">More</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="testimoni container mb-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="float-left">
+                            <h3 class="ml-3 mb-4">
+                                <strong>Testimoni</strong>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="table-responsive table-itinerary">
+                        <div class="float-left">
+                            <h5>
+                                <strong>Testimoni Jama'ah</strong>
+                            </h5>
+                        </div>
+                        <div class="float-right">
+                            <button href="#" class="btn btn-sm btn-new-testimoni ">
+                                <span class="fas fa-plus"></span> 
+                                <span>Create New</span>
+                            </button>
+                        </div>
+                        <table class="table table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h6>Jama'ah</h6>
+                                    </th>
+                                    <th>
+                                        <h6>Description</h6>
+                                    </th>
+                                    <th>
+                                        <h6>Photo</h6>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img class="avatar" src="./assets/img/images.jpeg" alt="Jama'ah Pitc">
+                                            <div class="media-body">
+                                                <h6 class="mt-2">Agus</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>Pelayanan yang diberikan sangat berkesan sekali sehingga saya nanti ... </h6>
+                                    </td>
+                                    <td>
+                                        <img src="./assets/img/testi.jpeg" class="avatar" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img class="avatar" src="./assets/img/images.jpeg" alt="Jama'ah Pitc">
+                                            <div class="media-body">
+                                                <h6 class="mt-2">Agus</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>recommended Travel Umroh</h6>
+                                    </td>
+                                    <td>
+                                        <img src="./assets/img/testi.jpeg" class="avatar" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img class="avatar" src="./assets/img/images.jpeg" alt="Jama'ah Pitc">
+                                            <div class="media-body">
+                                                <h6 class="mt-2">Agus</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6>Masya Allah sangat menikmati perjalan umroh</h6>
+                                    </td>
+                                    <td>
+                                        <img src="./assets/img/testi.jpeg" class="avatar" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
